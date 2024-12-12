@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Splash Screen Demo',
+      title: 'Splash Screen',
       theme: ThemeData(primarySwatch: Colors.blue),
       home: const SplashscreenView(),
     );
@@ -40,12 +40,12 @@ class SplashscreenView extends StatelessWidget {
             // Add logo here
             Image.asset(
               'assets/images/college.png', // Make sure to replace with the correct path to your logo
-              width: 150, // Adjust the size of the logo
-              height: 150,
+              width: 250, // Adjust the size of the logo
+              height: 250,
             ),
             const SizedBox(height: 20),
             const Text(
-              'Splash Screen',
+              'College Community',
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
