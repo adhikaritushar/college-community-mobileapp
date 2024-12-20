@@ -1,4 +1,4 @@
-# college_community_mobileapp
+# college_community_main
 
 A new Flutter project.
 

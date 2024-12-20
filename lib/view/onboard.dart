@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'login.dart'; // Import LoginView from the view folder
+import 'package:google_fonts/google_fonts.dart';
 
 class OnboardView extends StatelessWidget {
   const OnboardView({super.key});
@@ -7,55 +8,101 @@ class OnboardView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              // Logo
-              Image.asset(
-                'assets/images/college.png', // Make sure to replace with the correct path to your logo
-                width: 400,
-                height: 400,
+      body: PageView(
+        children: const [
+          OnboardPage(
+            title: 'Welcome to College Community',
+            description: 'Connect, communicate, and collaborate.',
+            imagePath: 'assets/images/student1.png',
+            backgroundColor: Colors.blueAccent,
+          ),
+          OnboardPage(
+            title: 'Simplify Queries',
+            description: 'Post and answer queries with ease.',
+            imagePath: 'assets/images/student2.png',
+            backgroundColor: Colors.greenAccent,
+          ),
+          OnboardPage(
+            title: 'Stay Updated',
+            description: 'Get real-time updates from your college.',
+            imagePath: 'assets/images/student3.png',
+            backgroundColor: Colors.purpleAccent,
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class OnboardPage extends StatelessWidget {
+  final String title;
+  final String description;
+  final String imagePath;
+  final Color backgroundColor;
+
+  const OnboardPage({
+    required this.title,
+    required this.description,
+    required this.imagePath,
+    required this.backgroundColor,
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: backgroundColor,
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            // Image
+            Image.asset(
+              imagePath,
+              width: 300,
+              height: 300,
+            ),
+            const SizedBox(height: 30),
+            // Title
+            Text(
+              title,
+              style: GoogleFonts.poppins(
+                fontSize: 28,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
               ),
-              const SizedBox(height: 30),
-              // Title
-              const Text(
-                'Welcome to College Community App!',
-                style: TextStyle(
-                  fontSize: 26,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                ),
-                textAlign: TextAlign.center,
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 15),
+// Description
+            Text(
+              description,
+              style: GoogleFonts.poppins(
+                fontSize: 18,
+                color: Colors.white70,
               ),
-              const SizedBox(height: 15),
-              // Description
-              const Text(
-                'Simplifying communication between students and faculty.',
-                style: TextStyle(
-                  fontSize: 18,
-                  color: Colors.black54,
-                ),
-                textAlign: TextAlign.center,
-              ),
-              const SizedBox(height: 50),
-              // Button
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 50),
+            // Get Started Button (only on the last page)
+            if (title == 'Stay Updated')
               ElevatedButton(
                 onPressed: () {
-                  // Navigate to LoginView
                   Navigator.pushReplacement(
                     context,
-                    MaterialPageRoute(builder: (context) => const LoginView()),
+                    MaterialPageRoute(
+                      builder: (context) => const LoginView(),
+                    ),
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
-                  backgroundColor: Colors.blue,
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 50,
+                    vertical: 15,
+                  ),
+                  backgroundColor: Colors.white,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8),
                   ),
@@ -66,12 +113,11 @@ class OnboardView extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white,
+                    color: Colors.black,
                   ),
                 ),
               ),
-            ],
-          ),
+          ],
         ),
       ),
     );

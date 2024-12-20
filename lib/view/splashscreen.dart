@@ -1,22 +1,6 @@
 import 'package:flutter/material.dart';
 import './onboard.dart'; // Import the OnboardView
-
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Splash Screen',
-      theme: ThemeData(primarySwatch: Colors.blue),
-      home: const SplashscreenView(),
-    );
-  }
-}
+import 'package:google_fonts/google_fonts.dart';
 
 class SplashscreenView extends StatelessWidget {
   const SplashscreenView({super.key});
@@ -32,7 +16,7 @@ class SplashscreenView extends StatelessWidget {
     });
 
     return Scaffold(
-      backgroundColor: Colors.blue,
+      backgroundColor: Colors.white,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -44,12 +28,12 @@ class SplashscreenView extends StatelessWidget {
               height: 250,
             ),
             const SizedBox(height: 20),
-            const Text(
+            Text(
               'College Community',
-              style: TextStyle(
+              style: GoogleFonts.poppins(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
-                color: Colors.white,
+                color: Colors.blue,
               ),
             ),
           ],

@@ -70,7 +70,8 @@ class RegisterView extends StatelessWidget {
               ),
               child: const Text(
                 'Sign Up',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 18,
+                    fontWeight: FontWeight.bold),
               ),
             ),
           ],

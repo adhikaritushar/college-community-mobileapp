@@ -89,13 +89,13 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "college_community_mobileapp" "\0"
+            VALUE "CompanyName", "com.tusharadhikari" "\0"
+            VALUE "FileDescription", "college_community_main" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "college_community_mobileapp" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2024 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "college_community_mobileapp.exe" "\0"
-            VALUE "ProductName", "college_community_mobileapp" "\0"
+            VALUE "InternalName", "college_community_main" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2024 com.tusharadhikari. All rights reserved." "\0"
+            VALUE "OriginalFilename", "college_community_main.exe" "\0"
+            VALUE "ProductName", "college_community_main" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

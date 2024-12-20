@@ -1,4 +1,4 @@
-package com.example.college_community_mobileapp
+package com.tusharadhikari.college_community_main
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -1,6 +1,6 @@
 {
-    "name": "college_community_mobileapp",
-    "short_name": "college_community_mobileapp",
+    "name": "college_community_main",
+    "short_name": "college_community_main",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

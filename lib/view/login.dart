@@ -1,5 +1,6 @@
+import 'package:college_community_main/view/register.dart';
+
 import './dashboard.dart'; // Import DashboardView
-import 'package:college_community_mobileapp/view/register.dart'; // Import RegisterView
 import 'package:flutter/material.dart';
 
 class LoginView extends StatelessWidget {

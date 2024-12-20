@@ -1,6 +1,5 @@
-import 'package:college_community_mobileapp/view/splashscreen.dart';
+import 'package:college_community_main/view/splashscreen.dart';
 import 'package:flutter/material.dart';
-
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -9,8 +8,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Dashboard',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: const SplashscreenView(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const SplashscreenView(),
+      },
     );
   }
 }
