@@ -1,3 +1,4 @@
+import 'package:college_community_main/core/theme/theme.dart';
 import 'package:college_community_main/view/splashscreen.dart';
 import 'package:flutter/material.dart';
 
@@ -9,7 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Dashboard',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme:getApplicationTheme(),
       initialRoute: '/',
       routes: {
         '/': (context) => const SplashscreenView(),
