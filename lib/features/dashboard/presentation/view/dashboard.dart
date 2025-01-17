@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './bottom_screen/home_view.dart'; // Import HomeScreenView
+import 'bottom_screen/home_view.dart'; // Import HomeScreenView
 
 class DashboardView extends StatefulWidget {
   const DashboardView({super.key});
