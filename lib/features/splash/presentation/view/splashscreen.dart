@@ -1,5 +1,7 @@
+import 'package:college_community_main/features/splash/presentation/view_model/splashscreen_cubit.dart';
 import 'package:flutter/material.dart';
-import './onboard.dart'; // Import the OnboardView
+import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../../onboarding/presentation/view/onboard.dart'; // Import the OnboardView
 import 'package:google_fonts/google_fonts.dart';
 
 class SplashscreenView extends StatelessWidget {
@@ -7,13 +9,11 @@ class SplashscreenView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Navigate to OnboardView after 3 seconds
-    Future.delayed(const Duration(seconds: 3), () {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) => const OnboardView()),
-      );
-    });
+    // Initialize the Cubit
+    final splashscreenCubit = SplashscreenCubit();
+
+    // Trigger navigation
+    splashscreenCubit.navigateToOnboardView(context);
 
     return Scaffold(
       backgroundColor: Colors.white,

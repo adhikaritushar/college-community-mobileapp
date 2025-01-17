@@ -1,5 +1,5 @@
 import 'package:college_community_main/core/theme/theme.dart';
-import 'package:college_community_main/view/splashscreen.dart';
+import 'package:college_community_main/features/splash/presentation/view/splashscreen.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {

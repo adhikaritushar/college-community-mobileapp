@@ -4,6 +4,9 @@ ThemeData getApplicationTheme() {
   return ThemeData(
     primarySwatch: Colors.orange,
     scaffoldBackgroundColor: Colors.white,
-    fontFamily: 'Montserrat Bold',
+    fontFamily: 'Roboto Bold',
+    appBarTheme: const AppBarTheme(
+      backgroundColor: Colors.blue
+    )
   );
 }

@@ -1,4 +1,4 @@
-import 'package:college_community_main/app.dart';
+import 'package:college_community_main/app/app.dart';
 import 'package:flutter/material.dart';
 
 // final
