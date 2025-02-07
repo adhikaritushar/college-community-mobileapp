@@ -5,6 +5,7 @@ import 'package:college_community_main/features/auth/domain/repository/auth_repo
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
 
+
 class LoginParams extends Equatable {
   final String username;
   final String password;
