@@ -18,11 +18,14 @@ void main() {
     usecase = LoginUseCase(repository, tokenSharedPrefs);
   });
 
-  test('should call the [AuthRepo.login] with correct username and password (kiran, kiran123)', () async {
-    when(() => repository.loginStudent(any(), any())).thenAnswer((invocation) async {
+  test(
+      'should call the [AuthRepo.login] with correct username and password (Tushar, Tushar123)',
+      () async {
+    when(() => repository.loginStudent(any(), any()))
+        .thenAnswer((invocation) async {
       final username = invocation.positionalArguments[0] as String;
       final password = invocation.positionalArguments[1] as String;
-      if (username == 'Kiran' && password == 'Kiran123') {
+      if (username == 'Tushar' && password == 'Tushar123') {
         return Future.value(const Right('token'));
       } else {
         return Future.value(
@@ -31,11 +34,12 @@ void main() {
       }
     });
 
-    when(() => tokenSharedPrefs.saveToken(any())).thenAnswer((_) async => Right(null));
+    when(() => tokenSharedPrefs.saveToken(any()))
+        .thenAnswer((_) async => Right(null));
 
     final result = await usecase(LoginParams(
-      username: 'Kiran',
-      password: 'Kiran123',
+      username: 'Tushar',
+      password: 'Tushar123',
     ));
 
     expect(result, const Right('token'));
